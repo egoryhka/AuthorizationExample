@@ -1,0 +1,16 @@
+﻿
+<form asp-controller="Authorization" asp-action="Login" method="post">
+
+    @{ if (ViewBag.Error != string.Empty)
+        {
+            <p style="color:orangered">@ViewBag.Error</p>
+        }
+    }
+
+    <input type="text" name="Login" placeholder="Логин..." />
+    <input type="text" name="Password" placeholder="Пароль..." />
+
+
+    <button type="submit">Войти</button>
+
+</form>

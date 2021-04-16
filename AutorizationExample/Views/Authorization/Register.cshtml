@@ -1,0 +1,35 @@
+﻿
+
+<form asp-controller="Authorization" asp-action="Register" method="post">
+    @{ if (ViewBag.Error != string.Empty)
+        {
+            <p style="color:orangered">@ViewBag.Error</p>
+        }
+    }
+
+
+    <input type="text" name="Login" value="@ViewBag.Login" placeholder="Логин..." />
+    <input type="text" name="Password" value="@ViewBag.Password" placeholder="Пароль..." />
+
+    <div style="display: flex; align-items: center;">
+        <div>Админ? </div>
+        <input id="AdminCode" type="text" name="AdminCode" value="@ViewBag.AdminCode" placeholder="Проверочный код..." />
+    </div>
+
+
+    <button type="submit">Рег</button>
+
+
+</form>
+
+
+@*<script>
+    let checkBox = document.getElementById('AdminCheckBox');
+    let adminCode = document.getElementById('AdminCode');
+
+    checkBox.onclick = function () {
+        adminCode.hidden = !adminCode.hidden;
+    }
+</script>*@
+
+
